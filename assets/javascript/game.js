@@ -13,9 +13,41 @@ var words = ['sushi', 'oatmeal', 'scallops', 'venison', 'adobo',
 // 	console.log(words[i])
 // }
 
-//begin game when any key is pressed
 //choose random word and display _ for every letter
-
-// document.onkeyup = function(){
 	var randomWord = words[Math.floor(Math.random() * words.length)];
-	document.getElementById('game').innerHTML = randomWord;
+//console log random word and random word length
+	console.log(randomWord)
+	console.log(randomWord.length)
+
+	for (var i = 0; i < randomWord.length; i++) {
+		var underScore = document.createElement ('t')
+		underScore.innerHTML='_ '
+		game.appendChild(underScore)
+	}
+
+//if user keys correct letter,
+//replace appropriate underscore with correct letter
+
+
+  var check = function () {
+    list.onclick = function () {
+      var geuss = (this.innerHTML);
+      this.setAttribute("class", "active");
+      this.onclick = null;
+      for (var i = 0; i < word.length; i++) {
+        if (word[i] === geuss) {
+          geusses[i].innerHTML = geuss;
+          counter += 1;
+        } 
+      }
+      var j = (word.indexOf(geuss));
+      if (j === -1) {
+        lives -= 1;
+        comments();
+        animate();
+      } else {
+        comments();
+        animate();
+      }
+    }
+  }
