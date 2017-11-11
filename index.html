@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Hang-Man Game</title>
+	<title>HangmanGame</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Philosopher|Ubuntu+Mono" rel="stylesheet">
 </head>
+
 <body>
-
-	<h1>Let's Play Hangman!</h1>
-	<h2>Category: Food</h2>
-	<p>Press Any Key to Get Started</p>
-
-	<div id="game">
-		
-	</div>
-
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-
+	<audio id="loser">
+		<source src="assets/images/lose.mp3" type="audio/mp3">
+	</audio>
+	<audio id="winner">
+		<source src="assets/images/win.mp3" type="audio/mp3">
+	</audio>
+	<h1 class="title yellow">Let's Play Hangman!!</h1>
+	<div style="width: 500px; margin: auto;"><p class="yellow center">Cooking Edition</p></div>
+		<div class="row" style="padding: 20px;">
+			<div class="col-md-3">
+				<h2 class="ubuntu green">Wins</h2>
+				<div class="ubuntu green" id="winDiv"></div>
+				<br>
+				<h2 class="ubuntu red">Losses</h2>
+				<div class="ubuntu red" id="loseDiv"></div>
+			</div>
+			<div class="col-md-6">
+				<h2 class="ubuntu white">Press any key to get started!</h2>
+				<br><br><br>
+				<div class="ubuntu white" id="wordDiv"></div>
+			</div>
+			<div class="col-md-3">
+				<h2 class="ubuntu white">Letters Guessed</h2>
+				<div class="ubuntu white" id="wrongDiv"></div>
+				<br><br>
+				<h2 class="ubuntu white">Guesses Left</h2>
+				<div class="ubuntu white" id="guessesDiv"></div>
+			</div>
+		</div>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
+
 </html>
