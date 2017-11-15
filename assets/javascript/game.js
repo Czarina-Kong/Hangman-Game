@@ -13,7 +13,7 @@ var letters = []	//array to store letters of word
 var output = []		//array to display underscore or correct letters
 var wrong = []		//array to display incorrect guesses
 //counters
-var guesses = 1
+var guesses = 10
 var wins = 0
 var losses = 0
 
@@ -104,7 +104,8 @@ function counters() {
 		document.getElementById('wrongDiv').innerHTML = wrong
 		document.getElementById('winDiv').innerHTML = wins
 		document.getElementById('wordDiv').innerHTML = word
-		beginGame()
+		setTimeout (function(){beginGame();},3000);
+		// beginGame()
 //lose if user has no more guesses
 	} else if (guesses === 0) {
 		playAudioLoser()
